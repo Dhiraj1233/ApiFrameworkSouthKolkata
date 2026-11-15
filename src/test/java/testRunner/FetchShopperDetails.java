@@ -11,7 +11,7 @@ import specBuilderGeneric.SpecBuilderWithoutBody;
 
 public class FetchShopperDetails  implements FrameworkConstant
 {
-	@Test
+	@Test(groups = "smoke")
 	public void getShopper() {
 
 		String token=GenericProperty.getData("jwtToken", setPropertiesPath);

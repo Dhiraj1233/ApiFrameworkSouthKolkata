@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import genericUtility.FrameworkConstant;
 import genericUtility.GenericProperty;
+import genericUtility.RandomDataUtility;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -15,21 +16,23 @@ import tools.jackson.databind.ObjectMapper;
 
 public class CreateShopperRunner implements FrameworkConstant
 {
-	@Test
+	@Test(groups = "smoke")
 	public void createShopper() {
 		
 		String baseUrl = GenericProperty.getData("BaseUrl", getPropertiesPath);
 		String content=GenericProperty.getData("content", getPropertiesPath);
 		
+		
+		
 		CreateShopperSers shopper = new CreateShopperSers();
 		shopper.setCity("Banglore");
 		shopper.setCountry("India");
-		shopper.setEmail("Dhiraj1091@gmail.com");
+		shopper.setEmail(RandomDataUtility.randomEmail());
 		shopper.setFirstName("Dhiraj");
 		shopper.setGender("MALE");
 		shopper.setLastName("kumar");
 		shopper.setPassword("Dhiraj@123");
-		shopper.setPhone("9876543212");
+		shopper.setPhone(RandomDataUtility.number());
 		shopper.setState("Karnataka");
 		shopper.setZoneId("ALPHA");
 		

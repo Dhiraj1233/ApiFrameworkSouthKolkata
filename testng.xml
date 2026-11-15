@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Api Suite" thread-count="5">
+ <groups>
+  <run>
+  <include name="smoke"></include>
+  </run>
+  </groups>
+ <listeners>
+        <listener class-name="genericUtility.ListenersUtility"/>
+    </listeners>
+   
+      <test  name="ShopperProfile">
+    <classes>
+      <class name="testRunner.LoginShopperRunner"/>
+      <class name="testRunner.CreateShopperRunner"/>
+      <class name="testRunner.FetchShopperDetails"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

@@ -17,7 +17,7 @@ import tools.jackson.databind.ObjectMapper;
 
 public class LoginShopperRunner implements FrameworkConstant
 {
-	@Test
+	@Test(groups = "smoke")
 	public void loginShopper() throws IOException {
 		String baseUrl = GenericProperty.getData("BaseUrl", getPropertiesPath);
 		String content=GenericProperty.getData("content", getPropertiesPath);

@@ -1,17 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-11-15T11:27:01 IST" name="Default suite" finished-at="2026-11-15T11:27:04 IST" duration-ms="2853">
+  <suite started-at="2026-11-15T13:29:44 IST" name="Api Suite" finished-at="2026-11-15T13:29:48 IST" duration-ms="4188">
     <groups>
+      <group name="smoke">
+        <method signature="CreateShopperRunner.createShopper()[pri:0, instance:testRunner.CreateShopperRunner@799f10e1]" name="createShopper" class="testRunner.CreateShopperRunner"/>
+        <method signature="FetchShopperDetails.getShopper()[pri:0, instance:testRunner.FetchShopperDetails@4c371370]" name="getShopper" class="testRunner.FetchShopperDetails"/>
+        <method signature="LoginShopperRunner.loginShopper()[pri:0, instance:testRunner.LoginShopperRunner@38d8f54a]" name="loginShopper" class="testRunner.LoginShopperRunner"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2026-11-15T11:27:01 IST" name="Default test" finished-at="2026-11-15T11:27:04 IST" duration-ms="2853">
+    <test started-at="2026-11-15T13:29:44 IST" name="ShopperProfile" finished-at="2026-11-15T13:29:48 IST" duration-ms="4188">
       <class name="testRunner.LoginShopperRunner">
-        <test-method signature="loginShopper()[pri:0, instance:testRunner.LoginShopperRunner@67c27493]" started-at="2026-11-15T11:27:01 IST" name="loginShopper" finished-at="2026-11-15T11:27:04 IST" duration-ms="2715" status="PASS">
+        <test-method signature="loginShopper()[pri:0, instance:testRunner.LoginShopperRunner@38d8f54a]" started-at="2026-11-15T13:29:44 IST" name="loginShopper" finished-at="2026-11-15T13:29:47 IST" duration-ms="2731" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginShopper -->
       </class> <!-- testRunner.LoginShopperRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="testRunner.CreateShopperRunner">
+        <test-method signature="createShopper()[pri:0, instance:testRunner.CreateShopperRunner@799f10e1]" started-at="2026-11-15T13:29:47 IST" name="createShopper" finished-at="2026-11-15T13:29:48 IST" duration-ms="1006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createShopper -->
+      </class> <!-- testRunner.CreateShopperRunner -->
+      <class name="testRunner.FetchShopperDetails">
+        <test-method signature="getShopper()[pri:0, instance:testRunner.FetchShopperDetails@4c371370]" started-at="2026-11-15T13:29:48 IST" name="getShopper" finished-at="2026-11-15T13:29:48 IST" duration-ms="213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getShopper -->
+      </class> <!-- testRunner.FetchShopperDetails -->
+    </test> <!-- ShopperProfile -->
+  </suite> <!-- Api Suite -->
 </testng-results>
