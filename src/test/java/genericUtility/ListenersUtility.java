@@ -22,7 +22,8 @@ public class ListenersUtility implements ITestListener
 
 	public  void onStart(ITestContext context) {
 		System.out.println("====== Suite/Test Started ======");
-		if (report == null) {   // create the report only once
+		if (report == null) {  
+			// create the report only once
 			String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
 			ExtentSparkReporter spark = new ExtentSparkReporter("./reports/API_Automation_" + timeStamp + ".html");
 			spark.config().setDocumentTitle("API Automation Testing");
@@ -42,7 +43,7 @@ public class ListenersUtility implements ITestListener
 		}
 	}
 	public void onTestStart(ITestResult result) {
-		ExtentTest test = report.createTest(result.getTestClass().getName() + " : " + result.getName());
+		test = report.createTest(result.getTestClass().getName() + " : " + result.getName());
 		test.assignCategory(result.getMethod().getGroups());
 		test.log(Status.INFO, "====On Test Start==== :"+result.getName());
 	}
